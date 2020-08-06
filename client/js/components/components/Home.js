@@ -28,10 +28,10 @@ export default class Home extends React.Component {
 
     render() {
         const responsive = {
-            600: {
+            400: {
               items: 5
             },
-            1024: {
+            500: {
               items: 10
             }
           };
@@ -57,21 +57,91 @@ export default class Home extends React.Component {
             infinite={false}
             mouseTrackingEnabled={true}
           >
-            <div className="yours-custom-class"><h2>1</h2></div>
-            <div className="yours-custom-class"><h2>2</h2></div>
-            <div className="yours-custom-class"><h2>3</h2></div>
-            <div className="yours-custom-class"><h2>4</h2></div>
-            <div className="yours-custom-class"><h2>5</h2></div>
-            <div className="yours-custom-class"><h2>6</h2></div>
-            <div className="yours-custom-class"><h2>7</h2></div>
-            <div className="yours-custom-class"><h2>8</h2></div>
-            <div className="yours-custom-class"><h2>9</h2></div>
-            <div className="yours-custom-class"><h2>10</h2></div>
-            <div className="yours-custom-class"><h2>11</h2></div>
-            <div className="yours-custom-class"><h2>12</h2></div>
-            <div className="yours-custom-class"><h2>13</h2></div>
-            <div className="yours-custom-class"><h2>14</h2></div>
-            <div className="yours-custom-class"><h2>15</h2></div>
+            <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>1</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>2</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>3</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>4</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>5</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>6</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>7</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>8</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>9</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>10</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>11</span>
+	            	</div>
+        	</div>
+      </div>
+      <div class='square-box'>
+              <div class='square-content'>
+		             <div>
+                 <span>12</span>
+	            	</div>
+        	</div>
+      </div>
+
           </AliceCarousel>
           </div>
         )
