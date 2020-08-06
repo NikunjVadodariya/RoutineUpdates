@@ -28,14 +28,11 @@ export default class Home extends React.Component {
 
     render() {
         const responsive = {
-            0: {
-              items: 1
-            },
             600: {
-              items: 2
+              items: 5
             },
             1024: {
-              items: 3
+              items: 10
             }
           };
         return (
@@ -47,7 +44,7 @@ export default class Home extends React.Component {
             startIndex = {1}
             fadeOutAnimation={true}
             mouseDragEnabled={true}
-            playButtonEnabled={true}
+            playButtonEnabled={false}
             responsive={responsive}
             autoPlayInterval={2000}
             autoPlayDirection="rtl"
@@ -60,6 +57,16 @@ export default class Home extends React.Component {
             <div className="yours-custom-class"><h2>3</h2></div>
             <div className="yours-custom-class"><h2>4</h2></div>
             <div className="yours-custom-class"><h2>5</h2></div>
+            <div className="yours-custom-class"><h2>6</h2></div>
+            <div className="yours-custom-class"><h2>7</h2></div>
+            <div className="yours-custom-class"><h2>8</h2></div>
+            <div className="yours-custom-class"><h2>9</h2></div>
+            <div className="yours-custom-class"><h2>10</h2></div>
+            <div className="yours-custom-class"><h2>11</h2></div>
+            <div className="yours-custom-class"><h2>12</h2></div>
+            <div className="yours-custom-class"><h2>13</h2></div>
+            <div className="yours-custom-class"><h2>14</h2></div>
+            <div className="yours-custom-class"><h2>15</h2></div>
           </AliceCarousel>
           </div>
         )
