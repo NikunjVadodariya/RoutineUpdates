@@ -42,7 +42,7 @@ export default class Home extends React.Component {
             <div class="home">
               <br/>
               <br/>
-              <div class="category-name"><h2>videos</h2></div>
+              <div class="category-name"><h1>videos</h1></div>
               <br/>
             <AliceCarousel
             duration={400}
