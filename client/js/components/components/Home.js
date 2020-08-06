@@ -40,7 +40,7 @@ export default class Home extends React.Component {
 
             <AliceCarousel
             duration={400}
-            autoPlay={true}
+            autoPlay={false}
             startIndex = {1}
             fadeOutAnimation={true}
             mouseDragEnabled={true}
