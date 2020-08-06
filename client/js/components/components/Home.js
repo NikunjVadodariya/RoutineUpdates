@@ -27,14 +27,17 @@ export default class Home extends React.Component {
 
 
     render() {
-        const responsive = {
-            400: {
-              items: 5
-            },
-            500: {
-              items: 10
-            }
-          };
+      const responsive = {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1024: {
+          items: 3
+        }
+      };
         return (
             <div class="home">
               <br/>
