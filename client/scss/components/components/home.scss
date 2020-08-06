@@ -7,9 +7,14 @@ width: 100%;
 
 .yours-custom-class{
     position: relative;
-    background-color: rgb(143, 163, 146);
+    background-color: rgb(255, 255, 255);
     height: 20vh;
-    border-color: rgb(142, 142, 145);
+    border-color: rgb(23, 24, 23);
     border-width: 10px;
     border-style: solid;
+}
+
+.category-name{
+    position: relative;
+    margin-left: 1vh;;
 }

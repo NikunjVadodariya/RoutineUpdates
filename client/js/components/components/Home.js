@@ -37,7 +37,10 @@ export default class Home extends React.Component {
           };
         return (
             <div class="home">
-
+              <br/>
+              <br/>
+              <div class="category-name"><h2>videos</h2></div>
+              <br/>
             <AliceCarousel
             duration={400}
             autoPlay={false}
