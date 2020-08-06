@@ -32,10 +32,10 @@ export default class Home extends React.Component {
           items: 1
         },
         600: {
-          items: 2
+          items: 8
         },
         1024: {
-          items: 3
+          items: 4
         }
       };
         return (
