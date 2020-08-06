@@ -3,4 +3,5 @@ import ReactDOM from 'react-dom';
 import App from "../components/RootComponents/App";
 import {BrowserRouter} from "react-router-dom";
 
+
 ReactDOM.render(<BrowserRouter><App/></BrowserRouter>,document.getElementById('app'));

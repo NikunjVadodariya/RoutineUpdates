@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react';
 import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import * as _ from 'lodash';
 import '../../../scss/components/components/home.scss'
 
@@ -38,6 +39,8 @@ export default class Home extends React.Component {
             }
           };
         return (
+            <div class="home">
+
             <AliceCarousel
             duration={400}
             autoPlay={true}
@@ -58,6 +61,7 @@ export default class Home extends React.Component {
             <div className="yours-custom-class"><h2>4</h2></div>
             <div className="yours-custom-class"><h2>5</h2></div>
           </AliceCarousel>
+          </div>
         )
     }
 }
