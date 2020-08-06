@@ -51,6 +51,8 @@ export default class Home extends React.Component {
             autoPlayActionDisabled={true}
             onSlideChange={this.onSlideChange}
             onSlideChanged={this.onSlideChanged}
+            infinite={false}
+            mouseTrackingEnabled={true}
           >
             <div className="yours-custom-class"><h2>1</h2></div>
             <div className="yours-custom-class"><h2>2</h2></div>
