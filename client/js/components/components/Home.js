@@ -83,6 +83,8 @@ export default class Home extends React.Component {
               slideToIndex = {0}
               onInitialized  = {this.onInitialized }
               swipeDisabled = {true}
+              autoPlayActionDisabled = {true}
+              keysControlDisabled ={true}
             >
               {this.createConversationUI()}
               {/* // <div class='square-box'>
