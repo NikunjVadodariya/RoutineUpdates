@@ -693,6 +693,7 @@ export default class Home extends React.Component {
               <Gallery class="galary"
                 images={this.state.categories.photos}
                 enableLightbox={true}
+                rowHeight = "300"
                 // maxRows={3}
                 backdropClosesModal
                 // currentImage={3}
