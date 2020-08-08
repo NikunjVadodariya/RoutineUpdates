@@ -29,8 +29,8 @@ export default class Home extends React.Component {
       }
 
     createConversationUI(){
-
-      return this.state.categories['videos'].map((item, i) =>{
+      let content = [...this.state.categories['videos'], <button>Show More</button>]
+      return content.map((item, i) =>{
          return <div class='square-box'>
         <div class='square-content'>
           <div>
@@ -69,7 +69,7 @@ export default class Home extends React.Component {
               playButtonEnabled={false}
               responsive={responsive}
               autoPlayInterval={2000}
-              autoPlayDirection="rtl"
+              autoPlayDirection="ltr"
               autoPlayActionDisabled={true}
               onSlideChange={this.onSlideChange}
               onSlideChanged={this.onSlideChanged}
@@ -78,6 +78,7 @@ export default class Home extends React.Component {
               dotsDisabled = {true}
               buttonsDisabled = {true}
               swipeDisabled = {true}
+              slideToIndex = {10}
             >
               {this.createConversationUI()}
               {/* // <div class='square-box'>
