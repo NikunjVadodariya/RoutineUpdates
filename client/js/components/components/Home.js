@@ -10,6 +10,10 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+          categories : {
+            "videos": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+            "photos": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+          }
        }
     }
 
@@ -24,7 +28,19 @@ export default class Home extends React.Component {
         console.log('Slide`s position after changes: ', e.slide);
       }
 
+    createConversationUI(){
 
+      return this.state.categories['videos'].map((item, i) =>{
+         return <div class='square-box'>
+        <div class='square-content'>
+          <div>
+            {console.log(item)}
+            <span>{item}</span>
+          </div>
+        </div>
+      </div>
+      })
+    }
 
     render() {
       const responsive = {
@@ -63,83 +79,84 @@ export default class Home extends React.Component {
               buttonsDisabled = {true}
               swipeDisabled = {true}
             >
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
-              <div class='square-box'>
-                <div class='square-content'>
-                  <div>
-                    <span>1</span>
-                  </div>
-                </div>
-              </div>
+              {this.createConversationUI()}
+              {/* // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span>1</span>
+              //     </div>
+              //   </div>
+              // </div>
+              // <div class='square-box'>
+              //   <div class='square-content'>
+              //     <div>
+              //       <span><button>Show More</button></span>
+              //     </div>
+              //   </div>
+              // </div> */}
             </AliceCarousel>
           </div>
         )
