@@ -89,7 +89,7 @@ export default class Home extends React.Component {
       };
         return (
             <div class="home">
-              <p>{window.innerWidth}</p>
+              <p>{screen.width}</p>
               <br/>
               <br/>
               <div class="category" style={this.state.showCategory? {visibility: "visible"}: {visibility: "hidden", position: "absolute"}}>
