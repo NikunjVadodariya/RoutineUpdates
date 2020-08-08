@@ -3,6 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import * as _ from 'lodash';
 import '../../../scss/components/components/home.scss'
+import { max } from 'lodash';
 
 
 
@@ -19,14 +20,17 @@ export default class Home extends React.Component {
 
 
     onSlideChange(e) {
-        console.log('Item`s position during a change: ', e.item);
-        console.log('Slide`s position during a change: ', e.slide);
+        // console.log('Item`s position during a change: ', e.item);
+        // console.log('Slide`s position during a change: ', e.slide);
       }
     
     onSlideChanged(e) {
-        console.log('Item`s position after changes: ', e.item);
-        console.log('Slide`s position after changes: ', e.slide);
+        // console.log('Item`s position after changes: ', e.item);
+        // console.log('Slide`s position after changes: ', e.slide);
       }
+    onInitialized(e){
+      console.log('Item`s intialized: ', e)
+    } 
 
     createConversationUI(){
       let content = [...this.state.categories['videos'], <button>Show More</button>]
@@ -62,8 +66,7 @@ export default class Home extends React.Component {
               <br/>
               <AliceCarousel
               duration={400}
-              autoPlay={false}
-              startIndex = {1}
+              autoPlay={true}
               fadeOutAnimation={true}
               mouseDragEnabled={false}
               playButtonEnabled={false}
@@ -77,8 +80,8 @@ export default class Home extends React.Component {
               mouseTrackingEnabled={false}
               dotsDisabled = {true}
               buttonsDisabled = {true}
-              swipeDisabled = {true}
               slideToIndex = {10}
+              onInitialized  = {this.onInitialized }
             >
               {this.createConversationUI()}
               {/* // <div class='square-box'>
