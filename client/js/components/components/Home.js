@@ -82,6 +82,7 @@ export default class Home extends React.Component {
               buttonsDisabled = {true}
               slideToIndex = {0}
               onInitialized  = {this.onInitialized }
+              swipeDisabled = {true}
             >
               {this.createConversationUI()}
               {/* // <div class='square-box'>
