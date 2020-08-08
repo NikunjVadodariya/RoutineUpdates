@@ -29,6 +29,13 @@ export default class Header extends React.Component {
                 <div class="header-text">
                     Daily Routines
                 </div>
+                <div class="horizontal-menu">
+                    <ul>
+                        <li><Link to="/" class="link">Home</Link></li>
+                        <li><Link to="/users" class="link">About Us</Link></li>
+                        <li><Link to="/users" class="link">Contact Us</Link></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <ion-icon name="logo-firefox"></ion-icon>
                 </div> 
