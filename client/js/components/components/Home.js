@@ -504,23 +504,44 @@ export default class Home extends React.Component {
     }
 
     createVideoCategoryUI(){
-      let content = [...this.state.categories['videos'], <button onClick={() => this.onClickShowMore("video")}>Show More</button>]
+      let content = [...this.state.categories['videos'], 'Show More']
       return content.map((item, i) =>{
-         return <div class='square-box'>
-        <div class='square-content'>
-            <img src={item.src}/>
-        </div>
-      </div>
-      })
-    }
+        return (i==content.length - 1)?
+        <div class='square-box'>
+       <div class='square-content'>
+       <div>
+       <img src={item.src}/>
+         <button onClick={() => this.onClickShowMore("photos")}>{item}</button>
+         </div>
+       </div>
+     </div>:<div class='square-box'>
+       <div class='square-content'>
+       <div>
+           <img src={item.src}/>
+           <button>Explore</button>
+         </div>
+       </div>
+     </div>
+     })
+   }
 
     createPhotoCategoryUI(){
-      let content = [...this.state.categories['photos'], <button onClick={() => this.onClickShowMore("photos")}>Show More</button>]
+      let content = [...this.state.categories['photos'], 'Show More']
       return content.map((item, i) =>{
-         return <div class='square-box'>
+         return (i==content.length - 1)?
+         <div class='square-box'>
         <div class='square-content'>
+        <div>
+        <img src={item.src}/>
+          <button onClick={() => this.onClickShowMore("photos")}>{item}</button>
+          </div>
+        </div>
+      </div>:<div class='square-box'>
+        <div class='square-content'>
+        <div>
             <img src={item.src}/>
-            
+            <button>Explore</button>
+          </div>
         </div>
       </div>
       })
