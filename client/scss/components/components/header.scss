@@ -13,13 +13,13 @@
   bottom: 0;
 }
 
-@media(max-width: 480px){
+@media screen and (max-width: 320px){
 .header{
   height: 8vh;
 }
 }
 
-@media (max-width: 768px){
+@media screen and (min-width:321px) and (max-width:768px){
   .header{
     height: 70px;
   }
