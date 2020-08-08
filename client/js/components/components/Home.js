@@ -18,6 +18,7 @@ export default class Home extends React.Component {
           showCategory: true,
        }
        this.onClickShowMore = this.onClickShowMore.bind(this)
+       this.getStartIndex = this.getStartIndex.bind(this)
     }
 
 
@@ -36,6 +37,16 @@ export default class Home extends React.Component {
       this.setState({
         showCategory: false
       })
+    }
+
+    getStartIndex(category_name){
+      if (window.innerWidth<=600){
+        return this.state.categories[category_name].length - 4;
+      }
+      if (600<window.innerWidth){
+        return this.state.categories[category_name].length - 9;
+      }
+
     }
 
     createVideoCategoryUI(){
@@ -70,12 +81,10 @@ export default class Home extends React.Component {
           items: 1
         },
         600: {
-          items: 5,
-          startIndex: 10
+          items: 5
         },
         1024: {
-          items: 10,
-          startIndex: 15
+          items: 10
         }
       };
         return (
@@ -88,6 +97,7 @@ export default class Home extends React.Component {
                   <br/>
                   <AliceCarousel
                   duration={0.0}
+                  startIndex = {this.getStartIndex("videos")}
                   autoPlay={false}
                   fadeOutAnimation={true}
                   mouseDragEnabled={false}
@@ -137,6 +147,7 @@ export default class Home extends React.Component {
                   swipeDisabled = {true}
                   autoPlayActionDisabled = {true}
                   keysControlDisabled ={true}
+                  startIndex = {this.getStartIndex("photos")}
                 >
                   {this.createPhotoCategoryUI()}
                 </AliceCarousel>
