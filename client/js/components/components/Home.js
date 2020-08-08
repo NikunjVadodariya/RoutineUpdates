@@ -132,6 +132,13 @@ export default class Home extends React.Component {
                   </div>
                 </div>
               </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
             </AliceCarousel>
           </div>
         )
