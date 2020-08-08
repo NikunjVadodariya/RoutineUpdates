@@ -44,108 +44,95 @@ export default class Home extends React.Component {
               <br/>
               <div class="category-name"><h1>videos</h1></div>
               <br/>
-            <AliceCarousel
-            duration={400}
-            autoPlay={false}
-            startIndex = {1}
-            fadeOutAnimation={true}
-            mouseDragEnabled={true}
-            playButtonEnabled={false}
-            responsive={responsive}
-            autoPlayInterval={2000}
-            autoPlayDirection="rtl"
-            autoPlayActionDisabled={true}
-            onSlideChange={this.onSlideChange}
-            onSlideChanged={this.onSlideChanged}
-            infinite={false}
-            mouseTrackingEnabled={true}
-          >
-            <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>1</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>2</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>3</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>4</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>5</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>6</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>7</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>8</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>9</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>10</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>11</span>
-	            	</div>
-        	</div>
-      </div>
-      <div class='square-box'>
-              <div class='square-content'>
-		             <div>
-                 <span>12</span>
-	            	</div>
-        	</div>
-      </div>
-
-          </AliceCarousel>
+              <AliceCarousel
+              duration={400}
+              autoPlay={false}
+              startIndex = {1}
+              fadeOutAnimation={true}
+              mouseDragEnabled={true}
+              playButtonEnabled={false}
+              responsive={responsive}
+              autoPlayInterval={2000}
+              autoPlayDirection="rtl"
+              autoPlayActionDisabled={true}
+              onSlideChange={this.onSlideChange}
+              onSlideChanged={this.onSlideChanged}
+              infinite={false}
+              mouseTrackingEnabled={false}
+              dotsDisabled = {true}
+              buttonsDisabled = {true}
+            >
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class='square-box'>
+                <div class='square-content'>
+                  <div>
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+            </AliceCarousel>
           </div>
         )
     }
