@@ -65,7 +65,7 @@ export default class Home extends React.Component {
               <div class="category-name"><h1>videos</h1></div>
               <br/>
               <AliceCarousel
-              duration={400}
+              duration={1}
               autoPlay={true}
               fadeOutAnimation={true}
               mouseDragEnabled={false}
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
               mouseTrackingEnabled={false}
               dotsDisabled = {true}
               buttonsDisabled = {true}
-              slideToIndex = {10}
+              slideToIndex = {0}
               onInitialized  = {this.onInitialized }
             >
               {this.createConversationUI()}
