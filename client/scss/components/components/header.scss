@@ -177,7 +177,7 @@
   }
 
     
-    @media screen and (min-width:1000px){
+    @media screen and (min-device-width:601px){
     .toggler{
       z-index: 0;
     }
@@ -189,7 +189,7 @@
     }
     }
 
-    @media screen and (max-width: 1001px){
+    @media screen and (max-device-width: 600px){
       .header{
         display: flex;
         justify-content: center;
