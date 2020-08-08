@@ -17,16 +17,16 @@ export default class Home extends React.Component {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -38,23 +38,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -66,23 +66,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -94,23 +94,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -122,8 +122,8 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 720,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               }
             ],
             "videos" : [
@@ -131,16 +131,16 @@ export default class Home extends React.Component {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -152,23 +152,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -180,23 +180,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -208,23 +208,23 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               },
               {
                 src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 174,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 caption: "After Rain (Jeshu John - designerspics.com)"
               },
               {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 thumbnail:
                   "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212,
+                thumbnailWidth: 100,
+                thumbnailHeight: 100,
                 tags: [
                   { value: "Ocean", title: "Ocean" },
                   { value: "People", title: "People" }
@@ -236,8 +236,8 @@ export default class Home extends React.Component {
                 src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
                 thumbnail:
                   "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 720,
-                thumbnailHeight: 212
+                thumbnailWidth: 100,
+                thumbnailHeight: 100
               }
             ],
             "audios" : [
@@ -511,14 +511,14 @@ export default class Home extends React.Component {
        <div class='square-content'>
        <div>
        <img src={item.src}/>
-         <button onClick={() => this.onClickShowMore("photos")}>{item}</button>
+         <button class="button" onClick={() => this.onClickShowMore("photos")}>{item}</button>
          </div>
        </div>
      </div>:<div class='square-box'>
        <div class='square-content'>
        <div>
            <img src={item.src}/>
-           <button>Explore</button>
+           {/* <button>Explore</button> */}
          </div>
        </div>
      </div>
@@ -540,7 +540,7 @@ export default class Home extends React.Component {
         <div class='square-content'>
         <div>
             <img src={item.src}/>
-            <button>Explore</button>
+            {/* <button>Explore</button> */}
           </div>
         </div>
       </div>
@@ -628,7 +628,7 @@ export default class Home extends React.Component {
                 <br/>
                 <br/>
                 <div class="photo-category">
-                  <div class="category-name"><h1>Photos</h1></div>
+                  <div class="category-name"><h1>Audios</h1></div>
                   <br/>
                   <AliceCarousel
                   duration={0}
@@ -658,7 +658,7 @@ export default class Home extends React.Component {
                 <br/>
                 <br/>
                 <div class="photo-category">
-                  <div class="category-name"><h1>Photos</h1></div>
+                  <div class="category-name"><h1>PDFs</h1></div>
                   <br/>
                   <AliceCarousel
                   duration={0}
@@ -688,7 +688,8 @@ export default class Home extends React.Component {
                 
             </div>
             <div class="show-more-category" style={!this.state.showCategory? {visibility: "visible"}: {visibility: "hidden", position: "absolute"}}>
-            <div class="category-name"><h1>Photos</h1></div>
+            <div class="category-name"><h1>Category Name</h1></div>
+            <br/>
               <Gallery class="galary"
                 images={this.state.categories.photos}
                 enableLightbox={true}
