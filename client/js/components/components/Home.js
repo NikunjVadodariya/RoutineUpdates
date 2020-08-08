@@ -32,8 +32,22 @@ export default class Home extends React.Component {
       console.log('Item`s intialized: ', e)
     } 
 
-    createConversationUI(){
+    createVideoCategoryUI(){
       let content = [...this.state.categories['videos'], <button>Show More</button>]
+      return content.map((item, i) =>{
+         return <div class='square-box'>
+        <div class='square-content'>
+          <div>
+            {console.log(item)}
+            <span>{item}</span>
+          </div>
+        </div>
+      </div>
+      })
+    }
+
+    createPhotoCategoryUI(){
+      let content = [...this.state.categories['photos'], <button>Show More</button>]
       return content.map((item, i) =>{
          return <div class='square-box'>
         <div class='square-content'>
@@ -62,7 +76,7 @@ export default class Home extends React.Component {
             <div class="home">
               <br/>
               <br/>
-              <div class="category-name"><h1>videos</h1></div>
+              <div class="category-name"><h1>Videos</h1></div>
               <br/>
               <AliceCarousel
               duration={0}
@@ -86,84 +100,36 @@ export default class Home extends React.Component {
               autoPlayActionDisabled = {true}
               keysControlDisabled ={true}
             >
-              {this.createConversationUI()}
-              {/* // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span>1</span>
-              //     </div>
-              //   </div>
-              // </div>
-              // <div class='square-box'>
-              //   <div class='square-content'>
-              //     <div>
-              //       <span><button>Show More</button></span>
-              //     </div>
-              //   </div>
-              // </div> */}
+              {this.createVideoCategoryUI()}
+            </AliceCarousel>
+
+            <br/>
+              <br/>
+              <div class="category-name"><h1>Photos</h1></div>
+              <br/>
+              <AliceCarousel
+              duration={0}
+              autoPlay={true}
+              fadeOutAnimation={true}
+              mouseDragEnabled={false}
+              playButtonEnabled={false}
+              responsive={responsive}
+              autoPlayInterval={0}
+              autoPlayDirection="ltr"
+              autoPlayActionDisabled={true}
+              onSlideChange={this.onSlideChange}
+              onSlideChanged={this.onSlideChanged}
+              infinite={false}
+              mouseTrackingEnabled={false}
+              dotsDisabled = {true}
+              buttonsDisabled = {true}
+              slideToIndex = {0}
+              onInitialized  = {this.onInitialized }
+              swipeDisabled = {true}
+              autoPlayActionDisabled = {true}
+              keysControlDisabled ={true}
+            >
+              {this.createPhotoCategoryUI()}
             </AliceCarousel>
           </div>
         )
