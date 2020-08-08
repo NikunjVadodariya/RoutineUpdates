@@ -489,10 +489,10 @@ export default class Home extends React.Component {
           items: 1
         },
         600: {
-          items: 5
+          items: 3
         },
         1024: {
-          items: 10
+          items: 5
         }
       };
         return (
@@ -508,7 +508,7 @@ export default class Home extends React.Component {
                   startIndex = {this.getStartIndex("videos")}
                   autoPlay={false}
                   fadeOutAnimation={true}
-                  mouseDragEnabled={false}
+                  mouseDragEnabled={true}
                   playButtonEnabled={false}
                   responsive={responsive}
                   autoPlayInterval={0}
@@ -517,13 +517,13 @@ export default class Home extends React.Component {
                   onSlideChange={this.onSlideChange}
                   onSlideChanged={this.onSlideChanged}
                   infinite={false}
-                  mouseTrackingEnabled={false}
+                  mouseTrackingEnabled={true}
                   dotsDisabled = {true}
-                  buttonsDisabled = {true}
+                  buttonsDisabled = {false}
                   onInitialized  = {this.onInitialized }
                   swipeDisabled = {true}
                   autoPlayActionDisabled = {true}
-                  keysControlDisabled ={true}
+                  keysControlDisabled ={false}
                 >
                   {this.createVideoCategoryUI()}
                 </AliceCarousel>
@@ -536,10 +536,11 @@ export default class Home extends React.Component {
                   <div class="category-name"><h1>Photos</h1></div>
                   <br/>
                   <AliceCarousel
-                  duration={0}
+                  duration={0.0}
+                  startIndex = {this.getStartIndex("videos")}
                   autoPlay={false}
                   fadeOutAnimation={true}
-                  mouseDragEnabled={false}
+                  mouseDragEnabled={true}
                   playButtonEnabled={false}
                   responsive={responsive}
                   autoPlayInterval={0}
@@ -548,14 +549,13 @@ export default class Home extends React.Component {
                   onSlideChange={this.onSlideChange}
                   onSlideChanged={this.onSlideChanged}
                   infinite={false}
-                  mouseTrackingEnabled={false}
+                  mouseTrackingEnabled={true}
                   dotsDisabled = {true}
-                  buttonsDisabled = {true}
+                  buttonsDisabled = {false}
                   onInitialized  = {this.onInitialized }
                   swipeDisabled = {true}
                   autoPlayActionDisabled = {true}
-                  keysControlDisabled ={true}
-                  startIndex = {this.getStartIndex("photos")}
+                  keysControlDisabled ={false}
                 >
                   {this.createPhotoCategoryUI()}
                 </AliceCarousel>
@@ -567,10 +567,11 @@ export default class Home extends React.Component {
                   <div class="category-name"><h1>Audios</h1></div>
                   <br/>
                   <AliceCarousel
-                  duration={0}
+                  duration={0.0}
+                  startIndex = {this.getStartIndex("videos")}
                   autoPlay={false}
                   fadeOutAnimation={true}
-                  mouseDragEnabled={false}
+                  mouseDragEnabled={true}
                   playButtonEnabled={false}
                   responsive={responsive}
                   autoPlayInterval={0}
@@ -579,14 +580,13 @@ export default class Home extends React.Component {
                   onSlideChange={this.onSlideChange}
                   onSlideChanged={this.onSlideChanged}
                   infinite={false}
-                  mouseTrackingEnabled={false}
+                  mouseTrackingEnabled={true}
                   dotsDisabled = {true}
-                  buttonsDisabled = {true}
+                  buttonsDisabled = {false}
                   onInitialized  = {this.onInitialized }
                   swipeDisabled = {true}
                   autoPlayActionDisabled = {true}
-                  keysControlDisabled ={true}
-                  startIndex = {this.getStartIndex("photos")}
+                  keysControlDisabled ={false}
                 >
                   {this.createPhotoCategoryUI()}
                 </AliceCarousel>
@@ -597,10 +597,11 @@ export default class Home extends React.Component {
                   <div class="category-name"><h1>PDFs</h1></div>
                   <br/>
                   <AliceCarousel
-                  duration={0}
+                  duration={0.0}
+                  startIndex = {this.getStartIndex("videos")}
                   autoPlay={false}
                   fadeOutAnimation={true}
-                  mouseDragEnabled={false}
+                  mouseDragEnabled={true}
                   playButtonEnabled={false}
                   responsive={responsive}
                   autoPlayInterval={0}
@@ -609,14 +610,13 @@ export default class Home extends React.Component {
                   onSlideChange={this.onSlideChange}
                   onSlideChanged={this.onSlideChanged}
                   infinite={false}
-                  mouseTrackingEnabled={false}
+                  mouseTrackingEnabled={true}
                   dotsDisabled = {true}
-                  buttonsDisabled = {true}
+                  buttonsDisabled = {false}
                   onInitialized  = {this.onInitialized }
                   swipeDisabled = {true}
                   autoPlayActionDisabled = {true}
-                  keysControlDisabled ={true}
-                  startIndex = {this.getStartIndex("photos")}
+                  keysControlDisabled ={false}
                 >
                   {this.createPhotoCategoryUI()}
                 </AliceCarousel>
