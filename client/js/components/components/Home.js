@@ -49,7 +49,7 @@ export default class Home extends React.Component {
               autoPlay={false}
               startIndex = {1}
               fadeOutAnimation={true}
-              mouseDragEnabled={true}
+              mouseDragEnabled={false}
               playButtonEnabled={false}
               responsive={responsive}
               autoPlayInterval={2000}
@@ -61,6 +61,7 @@ export default class Home extends React.Component {
               mouseTrackingEnabled={false}
               dotsDisabled = {true}
               buttonsDisabled = {true}
+              swipeDisabled = {true}
             >
               <div class='square-box'>
                 <div class='square-content'>
