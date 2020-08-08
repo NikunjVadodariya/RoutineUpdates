@@ -1,9 +1,8 @@
 import React, {forwardRef} from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
-import * as _ from 'lodash';
 import '../../../scss/components/components/home.scss'
-import { max } from 'lodash';
+import Gallery from "react-grid-gallery";
 
 
 
@@ -16,6 +15,120 @@ export default class Home extends React.Component {
             "photos": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20","21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
           },
           showCategory: true,
+          images : [
+            {
+              src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 174,
+              caption: "After Rain (Jeshu John - designerspics.com)"
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212,
+              tags: [
+                { value: "Ocean", title: "Ocean" },
+                { value: "People", title: "People" }
+              ],
+              caption: "Boats (Jeshu John - designerspics.com)"
+            },
+          
+            {
+              src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+              thumbnail:
+                "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 174,
+              caption: "After Rain (Jeshu John - designerspics.com)"
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212,
+              tags: [
+                { value: "Ocean", title: "Ocean" },
+                { value: "People", title: "People" }
+              ],
+              caption: "Boats (Jeshu John - designerspics.com)"
+            },
+          
+            {
+              src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+              thumbnail:
+                "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 174,
+              caption: "After Rain (Jeshu John - designerspics.com)"
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212,
+              tags: [
+                { value: "Ocean", title: "Ocean" },
+                { value: "People", title: "People" }
+              ],
+              caption: "Boats (Jeshu John - designerspics.com)"
+            },
+          
+            {
+              src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+              thumbnail:
+                "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 174,
+              caption: "After Rain (Jeshu John - designerspics.com)"
+            },
+            {
+              src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+              thumbnail:
+                "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+              thumbnailWidth: 320,
+              thumbnailHeight: 212,
+              tags: [
+                { value: "Ocean", title: "Ocean" },
+                { value: "People", title: "People" }
+              ],
+              caption: "Boats (Jeshu John - designerspics.com)"
+            },
+          
+            {
+              src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+              thumbnail:
+                "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+              thumbnailWidth: 720,
+              thumbnailHeight: 212
+            }
+          ]
        }
        this.onClickShowMore = this.onClickShowMore.bind(this)
        this.getStartIndex = this.getStartIndex.bind(this)
@@ -152,9 +265,79 @@ export default class Home extends React.Component {
                   {this.createPhotoCategoryUI()}
                 </AliceCarousel>
                 </div>
+
+                <br/>
+                <br/>
+                <div class="photo-category">
+                  <div class="category-name"><h1>Photos</h1></div>
+                  <br/>
+                  <AliceCarousel
+                  duration={0}
+                  autoPlay={false}
+                  fadeOutAnimation={true}
+                  mouseDragEnabled={false}
+                  playButtonEnabled={false}
+                  responsive={responsive}
+                  autoPlayInterval={0}
+                  autoPlayDirection="ltr"
+                  autoPlayActionDisabled={true}
+                  onSlideChange={this.onSlideChange}
+                  onSlideChanged={this.onSlideChanged}
+                  infinite={false}
+                  mouseTrackingEnabled={false}
+                  dotsDisabled = {true}
+                  buttonsDisabled = {true}
+                  onInitialized  = {this.onInitialized }
+                  swipeDisabled = {true}
+                  autoPlayActionDisabled = {true}
+                  keysControlDisabled ={true}
+                  startIndex = {this.getStartIndex("photos")}
+                >
+                  {this.createPhotoCategoryUI()}
+                </AliceCarousel>
+                </div>
+                <br/>
+                <br/>
+                <div class="photo-category">
+                  <div class="category-name"><h1>Photos</h1></div>
+                  <br/>
+                  <AliceCarousel
+                  duration={0}
+                  autoPlay={false}
+                  fadeOutAnimation={true}
+                  mouseDragEnabled={false}
+                  playButtonEnabled={false}
+                  responsive={responsive}
+                  autoPlayInterval={0}
+                  autoPlayDirection="ltr"
+                  autoPlayActionDisabled={true}
+                  onSlideChange={this.onSlideChange}
+                  onSlideChanged={this.onSlideChanged}
+                  infinite={false}
+                  mouseTrackingEnabled={false}
+                  dotsDisabled = {true}
+                  buttonsDisabled = {true}
+                  onInitialized  = {this.onInitialized }
+                  swipeDisabled = {true}
+                  autoPlayActionDisabled = {true}
+                  keysControlDisabled ={true}
+                  startIndex = {this.getStartIndex("photos")}
+                >
+                  {this.createPhotoCategoryUI()}
+                </AliceCarousel>
+                </div>
+                
             </div>
-            <div>
-              <h1>Category-items</h1>
+            <div class="show-more-category" style={!this.state.showCategory? {visibility: "visible"}: {visibility: "hidden", position: "absolute"}}>
+            <div class="category-name"><h1>Photos</h1></div>
+              <Gallery class="galary"
+                images={this.state.images}
+                enableLightbox={true}
+                // maxRows={3}
+                backdropClosesModal
+                // currentImage={3}
+                // isOpen={ true}
+              />
             </div>
           </div>
         )

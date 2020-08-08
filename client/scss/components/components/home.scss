@@ -57,13 +57,21 @@ z-index: 0;
 }
 
 .video-category{
-
+    width: 100%;
+    overflow: hidden;
 }
 
 .photo-category{
-
+    width: 100%;
+    overflow: hidden;
 }
 .category{
     width: 100%;
     overflow: hidden;
+    position: absolute;
+    margin-right: 18px;
+}
+
+.show-more-category{
+    width: 100%;
 }
