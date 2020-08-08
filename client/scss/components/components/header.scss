@@ -211,6 +211,7 @@
     .hamburger{
       opacity: 0;
     }
+    
     }
 
     @media screen and (max-device-width: 600px){
@@ -228,5 +229,7 @@
         top:0;
         bottom: 0;
       }
+      .horizontal-menu{
+        visibility: hidden;
       
       }
