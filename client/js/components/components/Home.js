@@ -65,13 +65,13 @@ export default class Home extends React.Component {
               <div class="category-name"><h1>videos</h1></div>
               <br/>
               <AliceCarousel
-              duration={1}
+              duration={0}
               autoPlay={true}
               fadeOutAnimation={true}
               mouseDragEnabled={false}
               playButtonEnabled={false}
               responsive={responsive}
-              autoPlayInterval={2000}
+              autoPlayInterval={0}
               autoPlayDirection="ltr"
               autoPlayActionDisabled={true}
               onSlideChange={this.onSlideChange}
