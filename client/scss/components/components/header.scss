@@ -1,8 +1,8 @@
 .header{
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  height: 80px;
   background-color: rgb(229, 235, 233);
   align-items: center;
   text-align: center;
@@ -12,16 +12,18 @@
   top:0;
   bottom: 0;
 }
+  
 
+  
   .toggler {
     position: absolute;
     top: 0;
     left: 1vw;
     z-index: 2;
-    // padding: 1rem;
+    padding: 1rem;
     cursor: pointer;
     width: 80px;
-    height: 80px;
+    height: 8vh;
     opacity: 0;
   }
   
@@ -31,8 +33,8 @@
     left: 1vw ;
     z-index: 1;
     width: 80px;
-    height:80px;
-    // padding: 1rem;
+    height:8vh;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
