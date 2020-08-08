@@ -40,10 +40,10 @@ export default class Home extends React.Component {
     }
 
     getStartIndex(category_name){
-      if (window.innerWidth<=600){
+      if (screen.width<=600){
         return this.state.categories[category_name].length - 4;
       }
-      if (600<window.innerWidth){
+      if (600<screen.width){
         return this.state.categories[category_name].length - 9;
       }
 
@@ -89,7 +89,6 @@ export default class Home extends React.Component {
       };
         return (
             <div class="home">
-              <p>{screen.width}</p>
               <br/>
               <br/>
               <div class="category" style={this.state.showCategory? {visibility: "visible"}: {visibility: "hidden", position: "absolute"}}>
