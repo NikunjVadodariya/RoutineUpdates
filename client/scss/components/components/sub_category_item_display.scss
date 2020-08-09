@@ -1,7 +1,7 @@
 .sub-category-item-display{
-    position: relative;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    // position: relative;
+    // margin-left: 20px;
+    // margin-bottom: 20px;
 }
 
 .modal {
@@ -15,6 +15,7 @@
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    margin-top: 10vh;
 }
 .modal-content {
     position: absolute;
