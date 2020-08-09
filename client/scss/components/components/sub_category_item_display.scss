@@ -23,8 +23,9 @@
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 50vw;
+    width: 80%;
     border-radius: 0.5rem;
+    z-index: 1000000;
 }
 .modal-content img{
     width: 100%;
