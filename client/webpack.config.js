@@ -18,6 +18,26 @@ module.exports = {
                 }
             },
             {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            //modules: true,
+                            modules: {
+                                // CSS name which we want to keep we can also
+                                // change it to something like this [name]-[local]--[hash:base64:5]
+                                localIdentName: '[name]',
+                            },
+                            url: false
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     {

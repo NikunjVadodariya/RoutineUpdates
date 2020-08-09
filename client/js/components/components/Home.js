@@ -5,6 +5,8 @@ import '../../../scss/components/components/home.scss'
 import Gallery from "react-grid-gallery";
 import SubCategories from "./sub_categories";
 import CategoryItems from "./category_items";
+import SubCategoryItems from "./sub_category_items";
+import SubCategoryItemDisplay from "./sub_category_item_display";
 
 
 
@@ -15,6 +17,7 @@ export default class Home extends React.Component {
           show_category : "categories",
           category_name: "videos",
           showCategory: true,
+          sub_category_name: '',
           categories: {
             "photos" :{ 
             "horizontal":
@@ -142,7 +145,104 @@ export default class Home extends React.Component {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 caption: "Boats (Jeshu John - designerspics.com)"
               }
-            ]
+            ],
+            "sub_categories":
+            {
+              "category_1":
+              [
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                }
+              ]
+        
+            }
           },
           "videos" :{ 
             "horizontal":
@@ -270,13 +370,113 @@ export default class Home extends React.Component {
                 src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
                 caption: "Boats (Jeshu John - designerspics.com)"
               }
-            ]
+            ],
+            "sub_categories":
+            {
+              "category_1":
+              [
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+              
+                {
+                  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+  
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+                  caption: "After Rain (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                },
+                {
+                  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                  caption: "Boats (Jeshu John - designerspics.com)"
+                }
+              ]
+        
+            }
           },
           
         }
        }
        this.onClickShowMore = this.onClickShowMore.bind(this)
+       this.onClickSubCategory = this.onClickSubCategory.bind(this)
        this.getStartIndex = this.getStartIndex.bind(this)
+       this.onClickSubCategoryItems = this.onClickSubCategoryItems.bind(this)
+       this.onClickSubCategoryItems = this.onClickSubCategoryItemDisplay.bind(this)
     }
 
 
@@ -290,13 +490,41 @@ export default class Home extends React.Component {
         // console.log('Slide`s position after changes: ', e.slide);
       }
 
-    onClickShowMore(category_name){
+
+
+    onClickSubCategory(category_name, sub_category_name){
+      console.log("on_click_category", category_name, sub_category_name);
       window.scrollTo(0, 0)
       this.setState({
-        showCategory: false,
-        category_name: category_name
+        show_category: "sub_category_items",
+        category_name: category_name,
+        sub_category_name: sub_category_name
+
       })
     }
+    onClickSubCategoryItems(category_name, sub_category_name){
+      console.log("on_click_category_item", category_name, sub_category_name);
+      window.scrollTo(0, 0)
+      this.setState({
+        show_category: "sub_category_item_display",
+        category_name: category_name,
+        sub_category_name: sub_category_name
+
+      })
+    }
+
+    onClickSubCategoryItemDisplay(category_name, sub_category_name){
+      console.log("on_click_category_item_display", category_name, sub_category_name);
+      window.scrollTo(0, 0)
+      this.setState({
+        show_category: "sub_category_item_display",
+        category_name: category_name,
+        sub_category_name: sub_category_name
+
+      })
+    }
+
+    
 
     getStartIndex(category_name){
       if (screen.width<=600){
@@ -417,15 +645,20 @@ export default class Home extends React.Component {
           items: 10
         }
       };
-
+    
         return (
             <div class="home">
               {(this.state.show_category=="categories")?
-              <CategoryItems  categories={this.state.categories} onClickShowMore={this.onClickShowMore}/>: null}
+              <CategoryItems  categories={this.state.categories} onClickShowMore={this.onClickShowMore} onClickSubCategory={this.onClickSubCategory}/>: null}
 
               {(this.state.show_category=="vertical_categories")?
-              <SubCategories  category_name= {this.state.category_name} categories={this.state.categories} onClickShowMore={this.onClickShowMore}/>: null}
+              <SubCategories  category_name= {this.state.category_name} categories={this.state.categories} onClickShowMore={this.onClickShowMore} onClickSubCategoryItems ={this.onClickSubCategoryItems }/>: null}
                   
+                  {(this.state.show_category=="sub_category_items")?
+              <SubCategoryItems  sub_category_name= {this.state.sub_category_name} category_name= {this.state.category_name} categories={this.state.categories} onClickSubCategoryItems ={this.onClickSubCategoryItems }/>: null}
+
+              {(this.state.show_category=="sub_category_item_display")?
+              <SubCategoryItemDisplay  sub_category_name= {this.state.sub_category_name} category_name= {this.state.category_name} categories={this.state.categories} onClickSubCategoryItemsDisplay ={this.onClickSubCategoryItemsDisplay }/>: null}
             </div>  
           
 

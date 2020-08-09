@@ -6,7 +6,7 @@ import Gallery from "react-grid-gallery";
 
 
 
-export default class SubCategories extends React.Component {
+export default class SubCategoryItems extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -35,14 +35,14 @@ export default class SubCategories extends React.Component {
         category_name: category_name
       })
     }
-    
-    onClickSubCategoryItems(category_name){
+
+    onClickSubCategoryItems(category_name, sub_category_name){
         window.scrollTo(0, 0)
         this.setState({
           showCategory: false,
           category_name: category_name
         })
-        this.props.onClickSubCategoryItems(category_name, "category_1")
+        this.props.onClickSubCategoryItems(category_name, sub_category_name)
       }
 
     getStartIndex(category_name){
@@ -55,10 +55,12 @@ export default class SubCategories extends React.Component {
 
     }
 
-    createVideoCategoryUI(){
-      let content = [...this.props.categories['videos']['vertical']]
+    createSubCategoryUI(){
+      let content = [...this.props.categories[this.props.category_name]['sub_categories'][this.props.sub_category_name]]
+      console.log("content", content)
+
       return content.map((item, i) =>{
-        return <article><div class='square-box' id="category_1" onClick={() => this.onClickSubCategoryItems("videos", "category_1")}>
+        return <article><div class='square-box' onClick={() => this.onClickSubCategoryItems(this.props.category_name, this.props.sub_category_name )}>
        <div class='square-content'>
        <div>
            <img src={item.src}/>
@@ -73,7 +75,7 @@ export default class SubCategories extends React.Component {
         console.log("in photo")
       let content = [...this.props.categories['photos']['vertical']]
       return content.map((item, i) =>{
-         return<artical><div class='square-box' id="category_1" onClick={() => this.onClickSubCategoryItems("photos", "category_1")}>
+         return<artical><div class='square-box'>
         <div class='square-content'>
         <div>
             <img src={item.src}/>
@@ -99,16 +101,15 @@ export default class SubCategories extends React.Component {
         return (
         <div class="show-more-category">
             <div class="category-name">
-                <h1>{this.props.category_name}</h1>
+                <h1>{this.props.category_name}({this.props.sub_category_name})</h1> 
             </div>
             
             <div class="sub_category">
                 
         <main class="grid">
-            {this.props.category_name == "videos"?
-        this.createVideoCategoryUI(): null}
-                    {this.props.category_name == "photos"?
-        this.createPhotoCategoryUI(): null}
+
+        {this.createSubCategoryUI()}
+
           {/* <article>
           <div class='square-box'>
         <div class='square-content'>

@@ -4,12 +4,23 @@ import Header from '../components/header.js'
 import Home from '../components/Home.js'
 require('es6-promise').polyfill();
 import '../../../scss/components/rootcomponents/app.scss'
+import 'react-responsive-modal/styles.css';
+import {Modal} from 'react-responsive-modal';
 
 
 export default class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+open: false
+        }
 }
+onOpenModal(){
+  this.setState({ open: true });
+};
+onCloseModal(){
+  this.setState({ open: false });
+};
     render() {
         return(
   <div class="app">
@@ -29,6 +40,7 @@ export default class App extends React.Component {
               <Home />
             </Route>
           </Switch>
+
         </div>
 
     );

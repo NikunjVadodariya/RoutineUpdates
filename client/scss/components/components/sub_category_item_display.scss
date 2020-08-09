@@ -1,0 +1,22 @@
+.sub-category-item-display{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+@keyframes customEnterAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes customLeaveAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }

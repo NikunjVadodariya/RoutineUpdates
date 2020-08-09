@@ -12,6 +12,7 @@ export default class CategoryItems extends React.Component {
         this.state = {
           }
        this.onClickShowMore = this.onClickShowMore.bind(this)
+       this.onClickSubCategory = this.onClickSubCategory.bind(this)
        this.getStartIndex = this.getStartIndex.bind(this)
     }
 
@@ -22,6 +23,15 @@ export default class CategoryItems extends React.Component {
           category_name: category_name
         })
         this.props.onClickShowMore(category_name)
+      }
+
+    onClickSubCategory(category_name){
+        window.scrollTo(0, 0)
+        this.setState({
+          showCategory: false,
+          category_name: category_name
+        })
+        this.props.onClickSubCategory(category_name, "category_1")
       }
     componentDidMount(){
         window.scrollTo(0, 0) 
@@ -47,10 +57,10 @@ export default class CategoryItems extends React.Component {
        <div class='square-content'>
        <div>
        <img src={item.src}/>
-         <button class="button" onClick={() => this.onClickShowMore("Videos")}>{item}</button>
+         <button class="button" onClick={() => this.onClickShowMore("videos")}>{item}</button>
          </div>
        </div>
-     </div>:<div class='square-box'>
+     </div>:<div class='square-box' id="category_1" onClick={() => this.onClickSubCategory("videos", "category_1")}>
        <div class='square-content'>
        <div>
            <img src={item.src}/>
@@ -69,10 +79,10 @@ export default class CategoryItems extends React.Component {
         <div class='square-content'>
         <div>
         <img src={item.src}/>
-          <button onClick={() => this.onClickShowMore("Photos")}>{item}</button>
+          <button onClick={() => this.onClickShowMore("photos")}>{item}</button>
           </div>
         </div>
-      </div>:<div class='square-box'>
+      </div>:<div class='square-box' id="category_1" onClick={() => this.onClickSubCategory("photos", "category_1")}>
         <div class='square-content'>
         <div>
             <img src={item.src}/>
