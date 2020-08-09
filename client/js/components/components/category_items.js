@@ -15,27 +15,32 @@ export default class CategoryItems extends React.Component {
        this.getStartIndex = this.getStartIndex.bind(this)
     }
 
-    
     onClickShowMore(category_name){
         window.scrollTo(0, 0)
         this.setState({
           showCategory: false,
           category_name: category_name
         })
+        this.props.onClickShowMore(category_name)
       }
+    componentDidMount(){
+        window.scrollTo(0, 0) 
+        this.setState({
+          })
+    }
 
     getStartIndex(category_name){
       if (screen.width<=600){
-        return this.state.categories[category_name].length - 4;
+        return this.props.categories[category_name]['horizontal'].length - 2;
       }
       if (600<screen.width){
-        return this.state.categories[category_name].length - 9;
+        return this.props.categories[category_name]['horizontal'].length - 6;
       }
 
     }
 
     createVideoCategoryUI(){
-      let content = [...this.props.categories['videos'], 'Show More']
+      let content = [...this.props.categories['videos']['horizontal'], 'Show More']
       return content.map((item, i) =>{
         return (i==content.length - 1)?
         <div class='square-box'>
@@ -57,7 +62,7 @@ export default class CategoryItems extends React.Component {
    }
 
     createPhotoCategoryUI(){
-      let content = [...this.props.categories['photos'], 'Show More']
+      let content = [...this.props.categories['photos']['horizontal'], 'Show More']
       return content.map((item, i) =>{
          return (i==content.length - 1)?
          <div class='square-box'>
@@ -71,7 +76,7 @@ export default class CategoryItems extends React.Component {
         <div class='square-content'>
         <div>
             <img src={item.src}/>
-            <div>sub_category name</div>
+            {/* <div>sub_category name</div> */}
             {/* <button>Explore</button> */}
           </div>
         </div>
@@ -132,7 +137,7 @@ export default class CategoryItems extends React.Component {
           items: 3
         },
         1024: {
-          items: 5
+          items: 7
         }
       };
         return (
@@ -142,26 +147,26 @@ export default class CategoryItems extends React.Component {
                   <div class ="horozontal-categories">
                   <AliceCarousel
                   duration={0.0}
-                //   startIndex = {this.getStartIndex("videos")}
-                  startIndex = {8}
+                  startIndex = {this.getStartIndex("videos")}
+                //   startIndex = {1}
                   autoPlay={false}
                   fadeOutAnimation={true}
-                  mouseDragEnabled={true}
                   playButtonEnabled={false}
                   responsive={responsive}
                   autoPlayInterval={0}
                   autoPlayDirection="ltr"
-                  autoPlayActionDisabled={true}
+                  autoPlayActionDisabled={false}
                   onSlideChange={this.onSlideChange}
                   onSlideChanged={this.onSlideChanged}
                   infinite={false}
-                  mouseTrackingEnabled={true}
                   dotsDisabled = {true}
                   buttonsDisabled = {false}
-                  onInitialized  = {this.onInitialized }
-                  swipeDisabled = {true}
-                  autoPlayActionDisabled = {true}
+                  swipeDisabled = {false}
+                  autoPlayActionDisabled = {false}
                   keysControlDisabled ={false}
+                  touchTrackingEnabled={true}
+                  mouseDragEnabled={true}
+                  mouseTrackingEnabled={true}
                 >
                   {this.createVideoCategoryUI()}
                 </AliceCarousel>
@@ -173,8 +178,8 @@ export default class CategoryItems extends React.Component {
 
                   <AliceCarousel
                   duration={0.0}
-                //   startIndex = {this.getStartIndex("photos")}
-                  startIndex = {1}
+                  startIndex = {this.getStartIndex("photos")}
+                //   startIndex = {1}
                   autoPlay={false}
                   fadeOutAnimation={true}
                   mouseDragEnabled={true}

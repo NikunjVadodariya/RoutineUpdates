@@ -147,21 +147,46 @@ export default class SubCategories extends React.Component {
       };
         return (
         <div class="show-more-category">
-        <div class="category-name"><h1>{this.props.category_name}</h1></div>
+            <div class="category-name">
+                <h1>{this.props.category_name}</h1>
+            </div>
             
             <div class="sub_category">
-              <Gallery
-                images={this.props.categories.category_name}
-                enableLightbox={true}
-                // maxRows={3}
-                backdropClosesModal
-                // currentImage={3}
-                // isOpen={ true}
-              />
-              </div>
+                
+        <main class="grid">
+          <article>
+          <div class='square-box'>
+        <div class='square-content'>
+        <div>
+        <img src="https://source.unsplash.com/random/300x200"/>
+          </div>
+        </div>
+      </div>
+          </article>
+
+          <article>
+          <div class='square-box'>
+        <div class='square-content'>
+        <div>
+        <img src="https://source.unsplash.com/random/300x200"/>
+          </div>
+        </div>
+      </div>
+          </article>
+          <article>
+          <div class='square-box'>
+        <div class='square-content'>
+        <div>
+        <img src="https://source.unsplash.com/random/300x200"/>
+          </div>
+        </div>
+      </div>
+          </article>
+        </main>
+            </div>
           
 
-          </div>
+        </div>
         )
     }
 }
