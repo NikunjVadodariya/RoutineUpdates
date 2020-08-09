@@ -46,90 +46,31 @@ export default class SubCategories extends React.Component {
     }
 
     createVideoCategoryUI(){
-      let content = [...this.state.categories['videos'], 'Show More']
+      let content = [...this.props.categories['videos']['vertical']]
       return content.map((item, i) =>{
-        return (i==content.length - 1)?
-        <div class='square-box'>
-       <div class='square-content'>
-       <div>
-       <img src={item.src}/>
-         <button class="button" onClick={() => this.onClickShowMore("Videos")}>{item}</button>
-         </div>
-       </div>
-     </div>:<div class='square-box'>
+        return <article><div class='square-box'>
        <div class='square-content'>
        <div>
            <img src={item.src}/>
            {/* <button>Explore</button> */}
          </div>
        </div>
-     </div>
+     </div></article>
      })
    }
 
     createPhotoCategoryUI(){
-      let content = [...this.state.categories['photos'], 'Show More']
+        console.log("in photo")
+      let content = [...this.props.categories['photos']['vertical']]
       return content.map((item, i) =>{
-         return (i==content.length - 1)?
-         <div class='square-box'>
-        <div class='square-content'>
-        <div>
-        <img src={item.src}/>
-          <button onClick={() => this.onClickShowMore("Photos")}>{item}</button>
-          </div>
-        </div>
-      </div>:<div class='square-box'>
+         return<artical><div class='square-box'>
         <div class='square-content'>
         <div>
             <img src={item.src}/>
             {/* <button>Explore</button> */}
           </div>
         </div>
-      </div>
-      })
-    }
-
-    createAudioCategoryUI(){
-      let content = [...this.state.categories['photos'], 'Show More']
-      return content.map((item, i) =>{
-         return (i==content.length - 1)?
-         <div class='square-box'>
-        <div class='square-content'>
-        <div>
-        <img src={item.src}/>
-          <button onClick={() => this.onClickShowMore("Audios")}>{item}</button>
-          </div>
-        </div>
-      </div>:<div class='square-box'>
-        <div class='square-content'>
-        <div>
-            <img src={item.src}/>
-            {/* <button>Explore</button> */}
-          </div>
-        </div>
-      </div>
-      })
-    }
-
-    createPDFCategoryUI(){
-      let content = [...this.state.categories['photos'], 'Show More']
-      return content.map((item, i) =>{
-         return (i==content.length - 1)?
-         <div class='square-box'>
-        <div class='square-content'>
-        <div>
-        <img src={item.src}/>
-          <button onClick={() => this.onClickShowMore("PDFs")}>{item}</button>
-          </div>
-        </div>
-      </div>:<div class='square-box'>
-        <div class='square-content'>
-        <div>
-            <img src={item.src}/>
-            {/* <button>Explore</button> */}
-          </div>
-        </div>
-      </div>
+      </div></artical>
       })
     }
 
@@ -154,7 +95,11 @@ export default class SubCategories extends React.Component {
             <div class="sub_category">
                 
         <main class="grid">
-          <article>
+            {this.props.category_name == "Videos"?
+        this.createVideoCategoryUI(): null}
+                    {this.props.category_name == "Photos"?
+        this.createPhotoCategoryUI(): null}
+          {/* <article>
           <div class='square-box'>
         <div class='square-content'>
         <div>
@@ -181,7 +126,7 @@ export default class SubCategories extends React.Component {
           </div>
         </div>
       </div>
-          </article>
+          </article> */}
         </main>
             </div>
           

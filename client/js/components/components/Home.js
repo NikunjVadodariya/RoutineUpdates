@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         super(props);
         this.state = {
           show_category : "categories",
-          category_name: "Videos",
+          category_name: "videos",
           showCategory: true,
           categories: {
             "photos" :{ 
@@ -396,11 +396,12 @@ export default class Home extends React.Component {
       })
     }
 
-    onClickShowMore(c_name){
-      console.log("c_name", c_name);
+    onClickShowMore(category_name){
+      console.log("c_name", category_name);
       window.scrollTo(0, 0)
       this.setState({
-        show_category: "vertical_categories"
+        show_category: "vertical_categories",
+        category_name: category_name
       })
     }
 
@@ -423,7 +424,7 @@ export default class Home extends React.Component {
               <CategoryItems  categories={this.state.categories} onClickShowMore={this.onClickShowMore}/>: null}
 
               {(this.state.show_category=="vertical_categories")?
-              <SubCategories  categories={this.state.categories} onClickShowMore={this.onClickShowMore}/>: null}
+              <SubCategories  category_name= {this.state.category_name} categories={this.state.categories} onClickShowMore={this.onClickShowMore}/>: null}
                   
             </div>  
           
