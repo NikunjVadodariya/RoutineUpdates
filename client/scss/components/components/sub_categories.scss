@@ -1,9 +1,9 @@
 .grid {
-    margin: 30px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 20px;
     align-items: stretch;
+    margin-left: 20px;
     }
   
   .grid > article > .square-box > .square-content div {
@@ -48,3 +48,25 @@
       text-align: center;
     }
   }
+
+
+//   .sub_category{
+//     display: block;
+//     width: 100%;
+//     position: relative;
+//     margin-left: 20px;
+//     margin-bottom: 20px;
+// }
+
+// .sub_category{
+//     margin-left: 20px;
+//     margin-bottom: 20px;
+//     display: flex;
+//     width: 100%;
+// }
+
+.show-more-category{
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+}
