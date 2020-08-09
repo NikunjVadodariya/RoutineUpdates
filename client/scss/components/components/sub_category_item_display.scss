@@ -1,7 +1,7 @@
 .sub-category-item-display{
-    // position: relative;
-    // margin-left: 20px;
-    // margin-bottom: 20px;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .modal {
@@ -15,19 +15,25 @@
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
 }
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 80%;
-    height: auto;
-    border-radius: 0.5rem;
-    z-index: 1000000;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // background-color: white;
+    // padding: 1rem 1.5rem;
+    // width: 24rem;
+    // border-radius: 0.5rem;
+    margin-top: 101px;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
 .modal-content img{
     width: 100%;
