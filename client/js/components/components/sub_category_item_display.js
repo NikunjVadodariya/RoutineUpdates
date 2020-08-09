@@ -15,16 +15,11 @@ export default class SubCategoryItemDisplay extends React.Component {
        this.windowOnClick=this.windowOnClick.bind(this);
     }
 
-      onOpenModal(){
-        this.setState({ open: true });
-      };
-      onCloseModal(){
-        this.setState({ open: false });
-      };
 
 
 toggleModal() {
     document.querySelector(".modal").classList.toggle("show-modal");
+    this.props.onClickSubCategory(this.props.category_name, this.props.sub_category_name)
 }
 
 windowOnClick(event) {
@@ -34,16 +29,16 @@ windowOnClick(event) {
 }
 componentDidMount(){
     window.addEventListener("click", this.windowOnClick);
+    console.log(this.props.data)
 }
     render() {
 
         return (
         <div class="sub-category-item-display">
- <button class="trigger" onClick={() => this.toggleModal()}>Click here to trigger the modal!</button>
-    <div class="modal">
+    <div class="modal show-modal">
         <div class="modal-content">
             <span class="close-button" onClick={() => this.toggleModal()}>&times;</span>
-            <h1>Hello, I am a modal!</h1>
+            <img src={this.props.data[0].src}/>
         </div>
     </div>
 

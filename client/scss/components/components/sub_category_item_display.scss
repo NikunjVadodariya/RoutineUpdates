@@ -23,9 +23,14 @@
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 24rem;
+    width: 50vw;
     border-radius: 0.5rem;
 }
+.modal-content img{
+    width: 100%;
+    height: auto;
+}
+
 .close-button {
     float: right;
     width: 1.5rem;
