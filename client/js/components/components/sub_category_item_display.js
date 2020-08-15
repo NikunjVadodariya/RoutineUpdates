@@ -36,13 +36,33 @@ componentDidMount(){
         return (
         <div class="sub-category-item-display">
     <div class="modal show-modal">
-        <div class="modal-content">
-            <span class="close-button" onClick={() => this.toggleModal()}>&times;</span>
+        {/* <div class="modal-content">
+             <span class="close-button" onClick={() => this.toggleModal()}>&times;</span>
             <img src={this.props.data[0].src}/>
-        </div>
-        <div class="modal-buttons">
+             </div> */}
+        {/* <div class="modal-buttons">
                 <button>Download</button>
         </div>
+        <div class="modal-content">
+               <div class='square-box'>
+        <div class='square-content'>
+        <div>
+        <img src={this.props.data[0].src}/>
+          
+          </div>
+        </div>
+      </div>
+      </div>
+       <div class="outer">
+      <div class = "inner"> 
+           This will be Centered 
+      </div>
+ </div> */}
+ <div class="container">
+    <div class="box">  
+    Stuff goes here...
+    </div>
+</div>
     </div>
 
         </div>
