@@ -40,6 +40,9 @@ componentDidMount(){
             <span class="close-button" onClick={() => this.toggleModal()}>&times;</span>
             <img src={this.props.data[0].src}/>
         </div>
+        <div class="modal-buttons">
+                <button>Download</button>
+        </div>
     </div>
 
         </div>
