@@ -91,7 +91,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         disableHostCheck: true,
-        contentBase: [path.join(__dirname, 'templates'), path.join(__dirname, 'static', 'images'), path.join(__dirname, 'static', 'fonts'), path.join(__dirname, 'src', 'images', 'svg')],
+        contentBase: [path.join(__dirname, 'templates')],
         port: 5000,
         hotOnly: false,
         hot: false,

@@ -36,17 +36,20 @@ componentDidMount(){
         return (
             <div class="modal show-modal">
             <div class="modal-content">
-                <div class="content-control">
-                    <button class="download">Download</button>
-                    <div class="social-media-share">
-                        <img class="share" src="/whatsapp_icon.png"/>
-                    </div>
+                {/* <div class="content-control-upper"> */}
                     {/* <div class="share">
                     <i  class="fab fa-whatsapp"></i></div> */}
                     <span class="close-button" onClick={() => this.toggleModal()}>&times;</span>
+                {/* </div> */}
+                <img class="content" src={this.props.data[0].src}/>
+
+                <div class="content-control-lower">
+                                      <button class="download">Download</button>
+                    <div class="social-media-share">
+                        <img class="share" src="/static/images/whatsapp_icon.png"/>
+                    </div>  
                 </div>
                 
-                <img class="content" src={this.props.data[0].src}/>
             </div>
         </div>
         )
