@@ -14,6 +14,7 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+          sub_category_index: 0,
           show_category : "categories",
           category_name: "videos",
           showCategory: true,
@@ -476,7 +477,7 @@ export default class Home extends React.Component {
        this.onClickSubCategory = this.onClickSubCategory.bind(this)
        this.getStartIndex = this.getStartIndex.bind(this)
        this.onClickSubCategoryItems = this.onClickSubCategoryItems.bind(this)
-       this.onClickSubCategoryItems = this.onClickSubCategoryItemDisplay.bind(this)
+       this.onClickSubCategoryItemDisplay = this.onClickSubCategoryItemDisplay.bind(this)
     }
 
 
@@ -502,10 +503,11 @@ export default class Home extends React.Component {
 
       })
     }
-    onClickSubCategoryItems(category_name, sub_category_name){
-      console.log("on_click_category_item", category_name, sub_category_name);
+    onClickSubCategoryItems(category_name, sub_category_name, index){
+      console.log("on_click_subcategory_item", category_name, sub_category_name, index);
       window.scrollTo(0, 0)
       this.setState({
+        sub_category_index: index,
         show_category: "sub_category_item_display",
         category_name: category_name,
         sub_category_name: sub_category_name
@@ -657,7 +659,7 @@ export default class Home extends React.Component {
               <SubCategoryItems  categories={this.state.categories} sub_category_name= {this.state.sub_category_name} category_name= {this.state.category_name} categories={this.state.categories} onClickSubCategoryItems ={this.onClickSubCategoryItems }/>: null}
 
               {(this.state.show_category=="sub_category_item_display")?
-              <SubCategoryItemDisplay data={this.state.categories[this.state.category_name]['sub_categories'][this.state.sub_category_name]} onClickSubCategory={this.onClickSubCategory} sub_category_name= {this.state.sub_category_name} category_name= {this.state.category_name} categories={this.state.categories} onClickSubCategoryItemsDisplay ={this.onClickSubCategoryItemsDisplay }/>: null}
+              <SubCategoryItemDisplay sub_category_index={this.state.sub_category_index} data={this.state.categories[this.state.category_name]['sub_categories'][this.state.sub_category_name]} onClickSubCategory={this.onClickSubCategory} sub_category_name= {this.state.sub_category_name} category_name= {this.state.category_name} categories={this.state.categories} onClickSubCategoryItemsDisplay ={this.onClickSubCategoryItemsDisplay }/>: null}
             </div>  
           
 

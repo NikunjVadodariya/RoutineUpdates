@@ -36,13 +36,14 @@ export default class SubCategoryItems extends React.Component {
       })
     }
 
-    onClickSubCategoryItems(category_name, sub_category_name){
+    onClickSubCategoryItems(category_name, sub_category_name, index){
         window.scrollTo(0, 0)
         this.setState({
           showCategory: false,
           category_name: category_name
         })
-        this.props.onClickSubCategoryItems(category_name, sub_category_name)
+        this.props.onClickSubCategoryItems(category_name, sub_category_name, index)
+        console.log("selected", index)
       }
 
     getStartIndex(category_name){
@@ -60,7 +61,7 @@ export default class SubCategoryItems extends React.Component {
       console.log("content", content)
 
       return content.map((item, i) =>{
-        return <article><div class='square-box' onClick={() => this.onClickSubCategoryItems(this.props.category_name, this.props.sub_category_name )}>
+        return <article><div class='square-box' onClick={() => this.onClickSubCategoryItems(this.props.category_name, this.props.sub_category_name, i)}>
        <div class='square-content'>
        <div>
            <img src={item.src}/>
