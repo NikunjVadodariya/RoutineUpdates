@@ -50,4 +50,16 @@
   .grid > article{
     text-align: center;
   }
+
+  .show-more-category{
+    padding-left:5px;
+    padding-right: 5px;
+    margin-top: 10vh;
+    overflow-y: hidden ;
+  }
+
+  .back {
+    width: 50px;
+    height:30px;
+  }
 }

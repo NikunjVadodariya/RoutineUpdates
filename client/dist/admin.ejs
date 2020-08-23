@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>View Engine Demo</title> 
+</head> 
+<body> 
+  
+  <!- For printing variable these 
+      tags are used: <%= %>  --> 
+  <h1> <%= title %> </h1> 
+     
+  <!- For business logic these 
+      tags are used: <% %> --> 
+  <% if(true){ %> 
+      <h4>Greetings from geeksforgeeks</h4>  
+  <% } %> 
+  <h2> Videos</h2>
+  <% for (var i=0; i < data['videos']['sub_categories'].length;  i++ ) { %>
+    <p><%= data['videos']['sub_categories'][i]['name'] %></p>
+    <table>
+        <th>
+            <tr>src</tr>
+        </th>
+    </table>
+    <% } %>
+  <h2> Photos</h2>
+  <% for (var i=0; i < data['photos']['sub_categories'].length;  i++ ) { %>
+    <p><%= data['photos']['sub_categories'][i]['name'] %></p>
+    <% } %>
+</body> 
+</html> 

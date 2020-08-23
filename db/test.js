@@ -4,7 +4,6 @@ module.exports = (db) => ({
     get_data: () => {
         let data =  db.collection('RoutineUpdates')
             .find().toArray()
-        console.log("data", data)
         return data
     }
 ,

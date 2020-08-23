@@ -97,7 +97,7 @@
 }
 
 
-@media screen and (max-device-width: 700px){
+@media screen and (max-width: 959px){
     .modal-content {
         position: absolute;
         top: 50%;
@@ -112,8 +112,6 @@
     }
     .content-control-lower{
         position: relative;
-        margin-right: 20vw;
-        margin-left: 20vw;
         margin-top: 3vh;
         height:10%;
         display: flex;
@@ -121,16 +119,22 @@
         align-items: center;
     }
     .social-media-share{
-        height: 80%; 
-        width:75px;
+        height: 100%; 
     }
     .download{
         color: white;
         border-radius: 3px;
-        width:170px;
-        height: 80%;
-        font-size: 30px;
+        width:120px;
+        height: 100%;
+        font-size: 16px;
         text-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
         background: linear-gradient(to right, rgba(142, 26, 209, 0.5),rgba(49, 21, 207, 0.5),rgba(27, 43, 214, 0.5));
+    }
+  }
+
+
+  @media screen and (min-width:960px){
+    .social-media-share{
+        display: none;
     }
   }

@@ -30,13 +30,30 @@ server.listen(port, () => {
 
         // app.use('/test', auth, test(db, io));
         app.use(express.static('client/dist'));
+        app.set('views', path.join(__dirname, '/client/dist'))
+        app.set('view engine', 'ejs')
 
         app.get('/get_data', async (req, res) => {
             const db = require('./db/test')(routine_updates);
             let data = {};
             data = await db.get_data(data);
-            console.log("db", db)
             res.json(data)
+        })
+
+        let ejsOptions = {
+            // delimiter: '?', Adding this to tell you do NOT use this like I've seen in other docs, does not work for Express 4
+            async: true
+          };
+
+        app.get('/admin',  async (req, res) => {
+            const db = require('./db/test')(routine_updates);
+            let data = {};
+            data = await db.get_data(data);
+            console.log(data)
+            return await res.render('admin', { 
+                title: "category data management",
+                data: data[0]['categories']
+            }) 
         })
 
         app.get('*', (req, res) => {
