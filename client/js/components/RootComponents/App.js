@@ -8,19 +8,18 @@ import 'react-responsive-modal/styles.css';
 import {Modal} from 'react-responsive-modal';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-open: false
+          open: false
         }
 }
-onOpenModal(){
-  this.setState({ open: true });
+
+revertOpen(){
+  this.setState({ open: !this.state.open  });
 };
-onCloseModal(){
-  this.setState({ open: false });
-};
+  // this.props.history.push("/home")
     render() {
         return(
   <div class="app">
@@ -30,15 +29,9 @@ onCloseModal(){
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route  path="/about" render={(props) => (<About {...props} />)} />
+            <Route  path="/contact_us" render={(props) => (<Users {...props} />)} />
+            <Route  path="/" render={(props) => (<Home {...props} />)} />
           </Switch>
 
         </div>
@@ -48,5 +41,7 @@ onCloseModal(){
 
 }
 
-const About = () => <h2>About</h2>;
+export default withRouter(App);
+
+const About = () => <button class="back" onClick={() => this.goBack()}>Back</button>;
 const Users = () => <h2>Users</h2>;

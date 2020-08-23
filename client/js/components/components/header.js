@@ -27,7 +27,7 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                 <div class="header-text">
-                    Daily Routines
+                    Routines Updates
                 </div>
                 <div class="horizontal-menu">
                     <ul>

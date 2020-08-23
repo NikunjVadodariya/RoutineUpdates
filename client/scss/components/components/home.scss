@@ -1,32 +1,29 @@
 .home{
-position: absolute;
-margin-top: 12vh;
-width: 100%;
+margin-top: 16vh;
+width: 100vw;
 z-index: 1;
 }
 
-
-.yours-custom-class{
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    height: 20vh;
-    border-color: rgb(23, 24, 23);
-    border-width: 10px;
-    border-style: solid;
-}
+// .category{
+//     width: 100%;
+//     overflow-y: auto;
+//     position: absolute;
+// }
 
 
 
 
 
+// .yours-custom-class{
+//     position: relative;
+//     background-color: rgb(255, 255, 255);
+//     height: 20vh;
+//     border-color: rgb(23, 24, 23);
+//     border-width: 10px;
+//     border-style: solid;
+// }
 
-.category{
-    width: 100%;
-    overflow-y: auto;
-    position: absolute;
-}
-
-.button-class{
-    background-color: rgb(86, 137, 214);
-    color: white;
-}
+// .button-class{
+//     background-color: rgb(86, 137, 214);
+//     color: white;
+// }
