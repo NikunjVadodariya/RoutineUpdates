@@ -30,7 +30,7 @@ server.listen(port, () => {
         app.use(express.static('client/dist'));
 
         app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, 'index.html'))
+            res.sendFile(path.join(__dirname, '/client/dist/index.html'))
         })
         // app.use((req, res, next) => {
         //     let err = new Error('Not Found');
