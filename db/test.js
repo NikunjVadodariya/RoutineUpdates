@@ -1,8 +1,15 @@
 const ObjectId = require('mongodb').ObjectId;
 
 module.exports = (db) => ({
+    get_data: () => {
+        let data =  db.collection('RoutineUpdates')
+            .find().toArray()
+        console.log("data", data)
+        return data
+    }
+,
     get: (eventId) => {
-        return db.collection('participations')
+        return db.collection('RoutineUpdates')
             .find({eventId: ObjectId(eventId)})
             .project({name: 1, phone: 1, round: 1, deliveryStatus: 1})
             .toArray();

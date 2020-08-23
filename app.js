@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 const dotenv = require('dotenv');
 const path = require('path')
 const cors = require('cors');
@@ -8,6 +8,7 @@ dotenv.config();
 
 // const auth = require('./middleware/auth');
 // const test = require('./api/test');
+// const db = require('./db/test')();
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
@@ -20,14 +21,23 @@ server.listen(port, () => {
     console.log(`listening at port ${port}`)
 });
 
+
 (async () => {
     try {
-        // const client = await MongoClient.connect(process.env.DB);
-        // console.log('Connected to database.');
-        // const db = client.db('test');
+        const client = await MongoClient.connect(process.env.DB);
+        let routine_updates = client.db('RoutineUpdates');
+        console.log('Connected to database.');
 
         // app.use('/test', auth, test(db, io));
         app.use(express.static('client/dist'));
+
+        app.get('/get_data', async (req, res) => {
+            const db = require('./db/test')(routine_updates);
+            let data = {};
+            data = await db.get_data(data);
+            console.log("db", db)
+            res.json(data)
+        })
 
         app.get('*', (req, res) => {
             res.sendFile(path.join(__dirname, '/client/dist/index.html'))

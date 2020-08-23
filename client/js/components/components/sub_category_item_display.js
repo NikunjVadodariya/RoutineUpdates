@@ -89,11 +89,13 @@ export default class SubCategoryItemDisplay extends React.Component {
                         {this.props.category_name=="photos"?this.render_image():null}
                         {this.props.category_name=="videos"?this.render_youtube_video():null}
                         <div class="content-control-lower">
-                            <button class="download">Download</button>
-                            <div class="social-media-share">
-                            <a href="whatsapp://send?text=GFG Example for whatsapp sharing" data-action="share/whatsapp/share" target="_blank">
-                                <img class="share" src="/static/images/whatsapp_icon.png"/>
+                            <a href="/images/myw3schoolsimage.jpg" download>
+                                <button class="download">Download</button>
                             </a>
+                            <div class="social-media-share">
+                                <a href="whatsapp://send?text=GFG Example for whatsapp sharing" data-action="share/whatsapp/share" target="_blank">
+                                    <img class="share" src="/static/images/whatsapp_icon.png"/>
+                                </a>
                             </div>  
                         </div>
                     </div>
