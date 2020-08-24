@@ -24,8 +24,8 @@ server.listen(port, () => {
 
 (async () => {
     try {
-        const client = await MongoClient.connect(process.env.DB);
-        let routine_updates = client.db('RoutineUpdates');
+        // const client = await MongoClient.connect(process.env.DB);
+        // let routine_updates = client.db('RoutineUpdates');
         console.log('Connected to database.');
 
         // app.use('/test', auth, test(db, io));
@@ -34,9 +34,10 @@ server.listen(port, () => {
         app.set('view engine', 'ejs')
 
         app.get('/get_data', async (req, res) => {
-            const db = require('./db/test')(routine_updates);
+            // const db = require('./db/test')(routine_updates);
             let data = {};
-            data = await db.get_data(data);
+            // data = await db.get_data(data);
+            console.log(data)
             res.json(data)
         })
 
