@@ -1,12 +1,13 @@
 import React, {forwardRef} from 'react';
 import '../../../scss/components/components/sub_category_item_display.scss'
 import 'react-responsive-modal/styles.css';
+import { SocialSharingOriginal } from '@ionic-native/social-sharing';
 import YouTube from 'react-youtube';
 
 export default class SubCategoryItemDisplay extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {  
             open: false
        }
        this.toggleModal=this.toggleModal.bind(this);
@@ -86,6 +87,16 @@ export default class SubCategoryItemDisplay extends React.Component {
         //  return   <div class="youtube_content"><iframe src="https://www.youtube-nocookie.com/embed/QH2-TGUlwu4?autoplay=1&loop=1&modestbranding=1&showinfo=0&rel=0" width="100%" height="100%" frameborder="0" allowFullScreen></iframe></div>
     }  
 
+    WhatsAppShare(){
+        socialSharing = SocialSharingOriginal()
+        socialSharing.shareViaWhatsApp("hello")
+        .then(() => {
+            console.log("WP success")        
+        }).catch(() => {
+            console.log("WP errpr")        
+        });
+    }
+
     render() {
         return (
             <div class = "sub-category-item-display">
@@ -102,9 +113,9 @@ export default class SubCategoryItemDisplay extends React.Component {
                             : null}
 
                             <div class="social-media-share">
-                                <a class="whatsapp_social-media-share" href={this.state.whatsAppURL} data-action="share/whatsapp/share" target="_blank">
-                                    <img class="share" src="/static/images/whatsapp_icon.png" />
-                                </a>
+                                {/* <a class="whatsapp_social-media-share" href={this.state.whatsAppURL} data-action="share/whatsapp/share" target="_blank"> */}
+                                    <img onClick={this.WhatsAppShare()} class="share" src="/static/images/whatsapp_icon.png" />
+                                {/* </a> */}
                             </div>  
                         </div>
                     </div>

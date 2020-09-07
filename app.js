@@ -52,7 +52,7 @@ server.listen(port, () => {
             data = await db.get_data(data);
             console.log(data)
             return await res.render('admin', { 
-                title: "category data management",
+                title: "category management",
                 data: data[0]['categories']
             }) 
         })
