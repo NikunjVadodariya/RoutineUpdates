@@ -52,7 +52,8 @@ export default class SubCategoryItemDisplay extends React.Component {
     }
     componentDidMount(){
         var x = document.getElementsByClassName("whatsapp_social-media-share");
-        x.setAttribute("href", "whatsapp://send?text=hello");
+        console.log(x)
+        x.href = "whatsapp://send?text=hello";
         window.addEventListener("click", this.windowOnClick);
         console.log(this.props)
         this.props.setSubCategoryItemIndex(this.props.match.params.category_name, this.props.match.params.sub_category_name, this.props.match.params.index)
