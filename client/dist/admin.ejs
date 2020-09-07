@@ -28,54 +28,58 @@
       tags are used: <% %> --> 
   <% if(true){ %> 
   <% } %> 
-  <center><h2> Videos</h2></center>
-  <% for (var i=0; i < data['videos']['sub_categories'].length;  i++ ) { %>
-    <center><h3><%=i+1 %>. <%= data['videos']['sub_categories'][i]['name'] %></h3></center>
-    <table class="center">
-        <tr>
-            <td><% var imageUrl = data['photos']['sub_categories'][i]['src'] %><img src=<%= imageUrl%> /></td>
-            <td><input type="file" name="test"></input></td>
-        </tr>
-    </table>
-    <br>
-    <table class="center">
-        <tr>
-            <th>Name</th>
-            <th>YouTube ID</th>
-        <tr>
-        <% for (var j=0; j < data['videos']['sub_categories'][i]['items'].length;  j++ ) { %>
+  <form>
+    <center><h2> Videos</h2></center>
+    <% for (var i=0; i < data['videos']['sub_categories'].length;  i++ ) { %>
+        <center><h3><%=i+1 %>. <%= data['videos']['sub_categories'][i]['name'] %></h3></center>
+        <table class="center">
             <tr>
-                <td><%= data['videos']['sub_categories'][i]['items'][j]['name'] %></td>	
-                <td><% var value = data['videos']['sub_categories'][i]['items'][j]['id'] %><input type="text" value = <%= value %> /></td>
+                <td><% var imageUrl = data['photos']['sub_categories'][i]['src'] %><img src=<%= imageUrl%> /></td>
+                <td><input type="file" name="test"></input></td>
             </tr>
+        </table>
+        <br>
+        <table class="center">
+            <tr>
+                <th>Name</th>
+                <th>YouTube ID</th>
+            <tr>
+            <% for (var j=0; j < data['videos']['sub_categories'][i]['items'].length;  j++ ) { %>
+                <tr>
+                    <td><%= data['videos']['sub_categories'][i]['items'][j]['name'] %></td>	
+                    <td><% var value = data['videos']['sub_categories'][i]['items'][j]['id'] %><input type="text" value = <%= value %> /></td>
+                </tr>
+            <% } %>
+        </table>
         <% } %>
-    </table>
-    <% } %>
-    <hr>
-    <hr>
-    <center><h2> Photos</h2></center>
-    <% for (var i=0; i < data['photos']['sub_categories'].length;  i++ ) { %>
-      <center><h3><%=i+1 %>. <%= data['photos']['sub_categories'][i]['name'] %></h3></center>
-      <table class="center">
-        <tr>
-            <td><% var imageUrl = data['photos']['sub_categories'][i]['src'] %><img src=<%= imageUrl%> /></td>
-            <td><input type="file" name="test"></input></td>
-        </tr>
-    </table>
-    <br>
-      <table class="center">
-          <tr>
-              <th>Name</th>
-              <th>Image</th>
-              <th>Action</th>
-          <tr>
-          <% for (var j=0; j < data['photos']['sub_categories'][i]['items'].length;  j++ ) { %>
-              <tr>
-                  <td><%= data['photos']['sub_categories'][i]['items'][j]['name'] %></td>	
-                  <td><% var imageUrl = data['photos']['sub_categories'][i]['items'][j]['src'] %><img src=<%= imageUrl%> /></td>
-                  <td><input type="file" name="test"></input></td>
-              </tr>
-          <% } %>
-      </table>
-      <% } %>
+        <hr>
+        <hr>
+        <center><h2> Photos</h2></center>
+        <% for (var i=0; i < data['photos']['sub_categories'].length;  i++ ) { %>
+        <center><h3><%=i+1 %>. <%= data['photos']['sub_categories'][i]['name'] %></h3></center>
+        <table class="center">
+            <tr>
+                <td><% var imageUrl = data['photos']['sub_categories'][i]['src'] %><img src=<%= imageUrl%> /></td>
+                <td><input type="file" name="test"></input></td>
+            </tr>
+        </table>
+        <br>
+        <table class="center">
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Action</th>
+            <tr>
+            <% for (var j=0; j < data['photos']['sub_categories'][i]['items'].length;  j++ ) { %>
+                <tr>
+                    <td><%= data['photos']['sub_categories'][i]['items'][j]['name'] %></td>	
+                    <td><% var imageUrl = data['photos']['sub_categories'][i]['items'][j]['src'] %><img src=<%= imageUrl%> /></td>
+                    <td><input type="file" name="test"></input></td>
+                </tr>
+            <% } %>
+        </table>
+        <% } %>
+        <br>
+        <center><button>Submit</button></center>
+    </form>
 </html> 
