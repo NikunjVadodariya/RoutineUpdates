@@ -51,9 +51,9 @@ export default class SubCategoryItemDisplay extends React.Component {
         }
     }
     componentDidMount(){
-        var x = document.getElementsByClassName("whatsapp_social-media-share");
-        console.log(x)
-        x.href = "whatsapp://send?text=hello";
+        this.setState({
+            whatsAppURL: "whatsapp://send?text=hello"
+        })
         window.addEventListener("click", this.windowOnClick);
         console.log(this.props)
         this.props.setSubCategoryItemIndex(this.props.match.params.category_name, this.props.match.params.sub_category_name, this.props.match.params.index)
@@ -101,9 +101,10 @@ export default class SubCategoryItemDisplay extends React.Component {
                             : null}
 
                             <div class="social-media-share">
-                                <a class="whatsapp_social-media-share" href="" data-action="share/whatsapp/share" target="_blank">
+                                <a class="whatsapp_social-media-share" href={this.state.whatsAppURL} data-action="share/whatsapp/share" target="_blank">
                                     <img class="share" src="/static/images/whatsapp_icon.png" />
                                 </a>
+                                <button onclick="window.plugins.socialsharing.share('Here is your PDF file', 'Your PDF', 'www/files/manual.pdf')">Share PDF</button>
                             </div>  
                         </div>
                     </div>
