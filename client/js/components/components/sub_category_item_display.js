@@ -91,7 +91,7 @@ export default class SubCategoryItemDisplay extends React.Component {
                         {this.props.category_name=="photos"?this.render_image():null}
                         {this.props.category_name=="videos"?this.render_youtube_video():null}
                         <div class="content-control-lower">
-                            {this.props.category_name=="videos"?                            
+                            {this.props.category_name=="photos"?                            
                                 <a href= {this.props.categories[this.props.category_name]['sub_categories'][0]['items'][this.props.sub_category_item_index].src} download>
                                     <button class="download">Download</button>
                                 </a>
