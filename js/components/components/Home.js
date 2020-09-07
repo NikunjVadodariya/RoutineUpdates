@@ -25,9 +25,6 @@ class Home extends React.Component {
        this.onClickSubCategory = this.onClickSubCategory.bind(this)
        this.onClickSubCategoryItems = this.onClickSubCategoryItems.bind(this)
        this.onClickSubCategoryItemDisplay = this.onClickSubCategoryItemDisplay.bind(this)
-       this.setCategoryName = this.setCategoryName.bind(this)
-       this.setSubCategoryIndex = this.setSubCategoryIndex.bind(this)
-       this.setSubCategoryItemIndex = this.setSubCategoryItemIndex.bind(this)
        this.goBack = this.goBack.bind(this)
     }
 
@@ -100,39 +97,13 @@ class Home extends React.Component {
       });
   }
 
-  setCategoryName(category_name){
-    console.log("hello", category_name)
-    this.setState({
-      category_name: category_name
-    })
-  }
-
-  setSubCategoryIndex(category_name, sub_category_name){
-    let sub_category_index = this.state.categories[category_name]['sub_categories'].findIndex(el => el.name == sub_category_name)
-    console.log(category_name, sub_category_name, sub_category_index)
-    this.setState({
-      category_name: category_name,
-      sub_category_index: sub_category_index
-    })
-  }
-
-  setSubCategoryItemIndex(category_name, sub_category_name, sub_category_item_index){
-    let sub_category_index = this.state.categories[category_name]['sub_categories'].findIndex(el => el.name == sub_category_name)
-    console.log(category_name, sub_category_name, sub_category_index)
-    this.setState({
-      category_name: category_name,
-      sub_category_index: sub_category_index,
-      sub_category_item_index:sub_category_item_index
-    })
-  }
-
     render() {
         return <div class="home">
            { !this.state.isloading ?            
             <Switch>
-                <Route  path="/:category_name/vertical" render={(props) => (<SubCategories {...props} setCategoryName={this.setCategoryName} position={this.state.position} goBack={this.goBack} categories={this.state.categories} category_name= {this.state.category_name} onClickSubCategory ={this.onClickSubCategory}/>)} />  
-                <Route  path="/:category_name/:sub_category_name/:index" render={(props) => (<SubCategoryItemDisplay {...props} setSubCategoryItemIndex={this.setSubCategoryItemIndex} categories={this.state.categories} sub_category_item_index= {this.state.sub_category_item_index} sub_category_index={this.state.sub_category_index} category_name= {this.state.category_name} onClickSubCategoryItemDisplay ={this.onClickSubCategoryItemDisplay}/>)} />
-                <Route  path="/:category_name/:sub_category_name" render={(props) => (<SubCategoryItems {...props} setSubCategoryIndex={this.setSubCategoryIndex} position={this.state.position} goBack={this.goBack} categories={this.state.categories}  sub_category_index= {this.state.sub_category_index} category_name= {this.state.category_name} onClickSubCategoryItems ={this.onClickSubCategoryItems}/>)} />
+                <Route  path="/:category_name/vertical" render={(props) => (<SubCategories {...props} position={this.state.position} goBack={this.goBack} categories={this.state.categories} category_name= {this.state.category_name} onClickSubCategory ={this.onClickSubCategory}/>)} />  
+                <Route  path="/:category_name/:sub_category_name/:index" render={(props) => (<SubCategoryItemDisplay {...props}  categories={this.state.categories} sub_category_item_index= {this.state.sub_category_item_index} sub_category_index={this.state.sub_category_index} category_name= {this.state.category_name} onClickSubCategoryItemDisplay ={this.onClickSubCategoryItemDisplay}/>)} />
+                <Route  path="/:category_name/:sub_category_name" render={(props) => (<SubCategoryItems {...props} position={this.state.position} goBack={this.goBack} categories={this.state.categories}  sub_category_index= {this.state.sub_category_index} category_name= {this.state.category_name} onClickSubCategoryItems ={this.onClickSubCategoryItems}/>)} />
                 <Route path="/" render={(props) => (<CategoryItems {...props} categories={this.state.categories} categories={this.state.categories} onClickShowMore={this.onClickShowMore} onClickSubCategory={this.onClickSubCategory}/>)} />
             </Switch>
           :  null}

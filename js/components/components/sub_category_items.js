@@ -46,12 +46,6 @@ export default class SubCategoryItems extends React.Component {
     this.props.goBack(route)
   }
 
-  componentDidMount(){
-      console.log(this.props)
-      this.props.setSubCategoryIndex(this.props.match.params.category_name, this.props.match.params.sub_category_name)
-    }
-  
-
     render() {
         return (
         <div class="show-more-category">

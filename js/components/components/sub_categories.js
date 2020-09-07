@@ -40,11 +40,6 @@ export default class SubCategories extends React.Component {
     this.props.goBack("/")
   }
 
-  componentDidMount(){
-    console.log(this.props)
-    this.props.setCategoryName(this.props.match.params.category_name)
-  }
-
     render() {
       return (
         <div class="show-more-category">

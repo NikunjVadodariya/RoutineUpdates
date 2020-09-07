@@ -12,3 +12,5 @@ node_modules
 
 # Data
 data/
+
+/DB=mongodb://localhost:27017/RoutineUpdates
