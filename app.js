@@ -24,9 +24,9 @@ server.listen(port, () => {
 
 (async () => {
     try {
-        const client = await MongoClient.connect(process.env.DB);
-        let routine_updates = client.db('RoutineUpdates');
-        console.log('Connected to database.');
+        // const client = await MongoClient.connect(process.env.DB);
+        // let routine_updates = client.db('RoutineUpdates');
+        // console.log('Connected to database.');
 
         // app.use('/test', auth, test(db, io));
         app.use(express.static('client/dist'));
